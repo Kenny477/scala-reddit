@@ -1,6 +1,5 @@
 package kaze.web.scrape
 
-
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.Http
@@ -27,12 +26,6 @@ object HttpClientSingleRequest {
     implicit val executionContext = system.executionContext
 
     val headers: List[HttpHeader] = List()
-
-    // parseHeader("User-Agent", "PostmanRuntime/7.30.0")
-    // parseHeader("Accept", "*/*")
-    // parseHeader("Accept-Encoding", "gzip, deflate, br")
-    // parseHeader("Connection", "keep-alive")
-    // parseHeader("Cookie", "session_tracker=jXHTJp1S7a7zMnnRHc.0.1686292337964.Z0FBQUFBQmtnc2R5WUFFdWJhc3hJS0tLbThIR2pKb2ZXRExieFRXeFRueGY3cGQxR2ZfaHQtNkFmZy1GSnRjSkRTdDdnSWlpOE1pUmtNSzZ4ejVGcWlPVzBjM09xT293NjU0TXhTLWhsQjhzMmpvMVRXTjlETFlkb3RUc2xfMFM0enZUdktIOWRYUEI; Path=/; Domain=reddit.com; Secure; Expires=Fri, 09 Jun 2023 08:32:17 GMT;")
 
     val responseFuture: Future[HttpResponse] = Http().singleRequest(HttpRequest(uri = "https://www.reddit.com/r/scala.rss"))
 
