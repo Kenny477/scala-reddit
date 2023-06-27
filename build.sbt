@@ -6,7 +6,7 @@ val AkkaHttpVersion = "10.5.2"
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "scrape",
+    name := "lurkrss",
     version := "0.1.0-SNAPSHOT",
     scalaVersion := scala3Version,
     libraryDependencies ++= Seq(
